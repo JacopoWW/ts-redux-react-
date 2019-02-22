@@ -1,0 +1,18 @@
+{
+  "extends": ["tslint-config-alloy", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "**/node_modules/**"
+    ]
+  },
+  "rules": {
+    "linebreak-style": [true, "CRLF"],
+    "trailing-comma": [true, {
+      "multiline": "always",
+      "singleline": "never"
+    }]
+  }
+}
