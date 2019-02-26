@@ -1,9 +1,2 @@
-
-export interface IActionType {
-  [propName: string]: string;
-}
-const actionTypeMap: IActionType = {
-  test: 'test',
-};
-
-export default actionTypeMap;
+export const TEST = 'TEST';
+export const TEST2 = 'TEST2';

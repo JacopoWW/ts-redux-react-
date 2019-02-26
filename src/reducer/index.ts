@@ -1,13 +1,14 @@
 import { combineReducers, ReducersMapObject } from 'redux';
-import actionTypeMap, { IActionType } from '../actions/actionType';
+import * as ACTIONS from '../actions/actionType';
 import reducer from './reducer';
 
-function reducerObject(actionType: IActionType): ReducersMapObject {
-  const reducerObject = {};
-  Object.values(actionType).forEach((type) => {
-    reducerObject[type] = reducer(type);
+function reducerObject(): ReducersMapObject {
+  const reducerMap = {};
+  Object.values(ACTIONS).forEach((type) => {
+    console.log(type);
+    reducerMap[type] = reducer(type);
   });
-  return reducerObject;
+  return reducerMap;
 }
 
-export default combineReducers(reducerObject(actionTypeMap));
+export default combineReducers(reducerObject());

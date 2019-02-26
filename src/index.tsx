@@ -2,8 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './App';
-import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './components/App/App';
+import './index.scss';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store';
 
@@ -11,7 +12,9 @@ const rootElement: HTMLElement | null = document.getElementById('root');
 
 const app = (
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>
 );
 

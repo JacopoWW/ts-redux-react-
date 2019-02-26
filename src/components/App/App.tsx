@@ -1,6 +1,8 @@
 import * as React from 'react';
-import './App.css';
-import Header, { INavItem } from './components/Header';
+import { Route, Switch } from 'react-router';
+import Header, { INavItem } from '../Header';
+import Home from '../Home';
+import './App.scss';
 
 const navList: INavItem[] = [
   { text: '主页' },
@@ -17,6 +19,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header navList={navList} navRight={navRight} />
+        <Switch>
+          <Route path="/" component={Home} />
+        </Switch>
       </div>
     );
   }

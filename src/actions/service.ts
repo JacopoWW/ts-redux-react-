@@ -11,5 +11,5 @@ export function setToken(token: string): void {
 }
 
 export const url: { [propName: string]: any } = {
-  index: 'http://localhost:3000.com',
+  index: 'https://api.hawkeye.esportseyes.com/',
 };
