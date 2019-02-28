@@ -26,10 +26,10 @@ const mapState2Props = (state: any) => {
   };
 };
 
-const mapDispatch = (dispatch: Function) => {
+const mapDispatch = () => {
   return {
-    getTest: () => dispatcher(dispatch, TEST),
-    getTest2: () => dispatcher(dispatch, TEST2),
+    getTest: () => dispatcher(TEST),
+    getTest2: () => dispatcher(TEST2),
   };
 };
 
